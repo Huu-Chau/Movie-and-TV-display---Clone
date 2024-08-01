@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function HomeLayout() {
-       const backgroundImage = './src/./src/assets/background_netflix.jpg'
-
     return ( 
         <>
-            <header className="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"  style={{backgroundImage: `url(./src/assets/background_netflix.jpg)`}}>
+            <header className="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"  style={{backgroundImage: `url(/images/background_netflix.jpg)`}}>
                 <div className="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
                     <h1 className="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
                         Unlimited movies, TV shows, and more.
@@ -37,13 +35,13 @@ export default function HomeLayout() {
                     </h5>
                 </div>
                 <div className='md:w-1/2 flex justify-center items-center'>
-                    <img src="./src/assets/tv.png" className="w-8/12" alt=""/>
+                    <img src="/images/tv.png" className="w-8/12" alt=""/>
                 </div>
             </section>
 
             <section className='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style={{minHeight: `70vh`}}>
                 <div className='md:w-1/2 flex justify-center items-center order-2'>
-                    <img src="./src/assets/mobile-0819.jpg" className="w-8/12" alt=""/>
+                    <img src="/images/mobile-0819.jpg" className="w-8/12" alt=""/>
                 </div>
                 <div className="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
                     <h2 className="md:text-5xl text-4xl font-semibold mb-4">
@@ -65,7 +63,7 @@ export default function HomeLayout() {
                     </h5>
                 </div>
                 <div className='md:w-1/2 flex justify-center items-center'>
-                    <img src="./src/assets/netflix_kid.png" className="w-8/12" alt=""/>
+                    <img src="/images/netflix_kid.png" className="w-8/12" alt=""/>
                 </div>
             </section>
             

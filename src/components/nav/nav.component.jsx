@@ -6,7 +6,7 @@ export default function Nav() {
     return ( 
         <nav className="flex items-center py-3 px-4 fixed w-full z-50 bg-black" style={{gap: `2rem`}}>
             <Link to="/movies" className="pl-6 w-3/12 md:w-2\/12">
-                <img src="./src/assets/netflix.png" alt="logo" className="w-4/12"/>
+                <img src="/images/netflix.png" alt="logo" className="w-4/12"/>
             </Link>
             { shownNavbar &&
                 <div className="w-9/12">
