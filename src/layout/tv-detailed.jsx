@@ -35,7 +35,7 @@ export default function TVDetailed() {
                 </div>
                 <div className="p-8 w-3/12 relative">
                     <img src={`https://image.tmdb.org/t/p/original/${details.poster_path}`} className=".w-5\/12" alt=""/>
-                    <Link to={`/tv-series/watch-movie/${details.id}`} className="watch-now mt-4"><h1 className="text-2xl  ">Watch now</h1></Link>
+                    <Link to={`/tv-series/watch-series/${details.id}`} className="watch-now mt-4"><h1 className="text-2xl  ">Watch now</h1></Link>
                 </div>
             </section>
         </main>
