@@ -30,7 +30,7 @@ export default function App() {
         </Route>
         
         <Route path="tv-series" element={<MoviesLayout/>}>
-          <Route index element={<TVList/>} loader={getTVShows}/>
+          <Route index loader={getTVShows} element={<TVList/>}/>
             <Route path="detailed-series/:series_id" loader={({params}) => getTVTrailer(params.series_id)} element={<TVDetailed/>}>
               <Route path="watch-series" element={<Navigate to="/watch-series"/>}/>
             </Route>

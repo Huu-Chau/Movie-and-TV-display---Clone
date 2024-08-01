@@ -1,7 +1,7 @@
   
 import axios from 'axios';
 
-const api_key = import.meta.env.VITE_API_KEY
+  const api_key = import.meta.env.VITE_API_KEY
   const api_url = import.meta.env.VITE_API_URL
   const getNowPlayingMovies = async () => {
     try {
@@ -37,11 +37,12 @@ const api_key = import.meta.env.VITE_API_KEY
   }
 
 export  const getMoviesShow = async () => {
+    const movieTrending = await getTrendingMovieBanner()
     const moviesNowPlaying = await getNowPlayingMovies()
     const moviesTopRated = await getTopRatedMovies()
     const moviesPopular = await getPopularMovies()
     const moviesUpComing = await getUpComingMovies()
-    return {moviesNowPlaying, moviesTopRated, moviesPopular, moviesUpComing}
+    return {movieTrending, moviesNowPlaying, moviesTopRated, moviesPopular, moviesUpComing}
   }
 
   const getAiringTodayTVShows = async () => {
@@ -78,11 +79,12 @@ export  const getMoviesShow = async () => {
   }
 
  export const getTVShows = async () => {
+    const TrendingTVShows = await getTrendingTVBanner()
     const AiringTodayTVShows = await getAiringTodayTVShows()
     const OnTheAirTVShows = await getOnTheAirTVShows()
     const PopularTVShows = await getPopularTVShows()
     const TopRatedTVShows = await getTopRatedTVShows()
-    return {AiringTodayTVShows, OnTheAirTVShows, PopularTVShows, TopRatedTVShows}
+    return {TrendingTVShows, AiringTodayTVShows, OnTheAirTVShows, PopularTVShows, TopRatedTVShows}
   }
 
   const getDetailedMovies = async (id) => {
@@ -130,4 +132,21 @@ export  const getMoviesShow = async () => {
     const details = await getDetailedSeries(id)
     const trailer = await getTrailerSeries(id)
     return {details, trailer}
+  }
+
+  export const getTrendingMovieBanner = async () => {
+    try {
+      const response = await axios.get(`${api_url}/trending/movie/day?api_key=${api_key}`)
+      return response.data
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  export const getTrendingTVBanner = async () => {
+    try {
+      const response = await axios.get(`${api_url}/trending/tv/day?api_key=${api_key}`)
+      return response.data
+    } catch (error) {
+      console.error(error)
+    }
   }

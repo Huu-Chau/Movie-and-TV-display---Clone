@@ -756,7 +756,7 @@ video {
 
 .text-6xl{
   font-size: 3.75rem;
-  line-height: 0;
+  line-height: 1;
 }
 
 .m-4{
