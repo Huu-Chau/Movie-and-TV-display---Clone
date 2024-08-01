@@ -123,12 +123,14 @@ export  const getMoviesShow = async () => {
   }
 
  export const getMovieTrailer = async (id) => {
+  console.log(id)
     const details = await getDetailedMovies(id)
     const trailer = await getTrailerMovies(id)
     return {details, trailer}
   }
 
  export const getTVTrailer = async (id) => {
+  console.log(id)
     const details = await getDetailedSeries(id)
     const trailer = await getTrailerSeries(id)
     return {details, trailer}

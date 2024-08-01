@@ -21,7 +21,7 @@ export default function TVDetailed() {
             />
             <section className='bg-primary_black  min-h-screen flex justify-around py-10'>
                 <div className="p-8 w-4/12 relative" >
-                    <h1 className="text-gray-200 text-5xl font-medium">{details.title}</h1>
+                    <h1 className="text-gray-200 text-5xl font-medium">{details.name}</h1>
                     <h2 className="text-2xl font-medium">{details.tagline}</h2> 
                     {/* <h3 className="text-gray-200 text-3xl font-medium">
                         Description
@@ -35,7 +35,7 @@ export default function TVDetailed() {
                 </div>
                 <div className="p-8 w-3/12 relative">
                     <img src={`https://image.tmdb.org/t/p/original/${details.poster_path}`} className=".w-5\/12" alt=""/>
-                    <Link to="/watch-movie" className="watch-now mt-4"><h1 className="text-2xl  ">Watch now</h1></Link>
+                    <Link to={`/tv-series/watch-movie/${details.id}`} className="watch-now mt-4"><h1 className="text-2xl  ">Watch now</h1></Link>
                 </div>
             </section>
         </main>

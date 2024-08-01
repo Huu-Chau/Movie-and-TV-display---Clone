@@ -24,20 +24,19 @@ export default function App() {
         <Route path="movies" element={<MoviesLayout/>}>
           <Route index loader={getMoviesShow} element={<MovieList/>}/>
           <Route path="detailed-movie/:movies_id" loader={({params}) => getMovieTrailer(params.movies_id)} element={<MovieDetailed/>}>
-            <Route path="watch-movie" element={<Navigate to="/watch-movie"/>}/>
+            <Route path="watch-movie/:movies_id" element={<Navigate to="/watch-movie"/>}/>
           </Route>
-          <Route path="watch-movie" element={<Navigate to="/watch"/>}/>
+          <Route path="watch-movie/:movies_id" element={<Watch/>}/>
         </Route>
         
         <Route path="tv-series" element={<MoviesLayout/>}>
           <Route index loader={getTVShows} element={<TVList/>}/>
             <Route path="detailed-series/:series_id" loader={({params}) => getTVTrailer(params.series_id)} element={<TVDetailed/>}>
-              <Route path="watch-series" element={<Navigate to="/watch-series"/>}/>
+              <Route path="watch-series/:series_id" element={<Navigate to="/watch-series"/>}/>
             </Route>
-          <Route path="watch-series" element={<Navigate to="/watch"/>}/>
+          <Route path="watch-series/:series_id" element={<Watch/>}/>
         </Route>
         <Route path="search" element={<SearchLayout/>}/>
-        <Route path="watch" element={<Watch/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Route>
     )
