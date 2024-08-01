@@ -36,7 +36,6 @@ export default function App() {
             </Route>
           <Route path="watch-series" element={<Navigate to="/watch"/>}/>
         </Route>
-
         <Route path="search" element={<SearchLayout/>}/>
         <Route path="watch" element={<Watch/>}/>
         <Route path="*" element={<NotFound/>}/>
