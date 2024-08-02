@@ -37,15 +37,4 @@ Here is the component structure of the website i made.
 - Basic understanding of **axios and async awaits** to fetch the data and change the parameter input.
 - Learn the **flows of the website** so as to **handle the error** more **efficiency**.
 - Learn how to **fetch data with url parameters** to perform tasks (use it as a parameter to fetch the data required, use the value to display the content of the website)
-  
-## Future updates:
 
-  This website has all the basic requirement of a Weather Report website.
-
-- Adding animation such as the animation of the current weather (sunny, rain) in the background for better User experience
-- Adding searching feature that zoning the closest input value and diplay it into a drop down list. This will require an understanding of backend coding. Which is why I have plans to learn Nodejs to make it happen.
-- Change the "Submit Location" button into "Current Location" as we will click directly on the drop list to display that city's weather status
-- Adding features to convert the tempreture from °C to °F, as well as convering km/h into mph/h
-- Create a navigation bar with Home that display the content of the website and Saved city that store the city's weather status you saved and display it on the Home page.
-- I have plans of learning React Native in order to deploy a true app, not just a website.
-- I want to display the data of the area the user is standing which will require google maps api from the users.
